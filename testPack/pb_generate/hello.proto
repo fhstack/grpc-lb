@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package pb_gen;
+
+message HelloRequest {
+    string Name = 1;
+}
+
+message HelloResponse {
+    string Resp = 1;
+}
+
+service Greeter {
+    rpc SayHello(HelloRequest) returns (HelloResponse){}
+}
