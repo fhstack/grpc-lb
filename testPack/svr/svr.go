@@ -28,7 +28,7 @@ func main() {
 	}
 
 	//150 just a test magic number
-	err = grpclb.Register(*register, *service, *host, *port, 150)
+	err = grpclb.Register(*register, *service, *host, *port, false, -1)
 	if err != nil {
 		log.Fatalf("Register service:'%s' failed: %v", *service, err)
 	}
